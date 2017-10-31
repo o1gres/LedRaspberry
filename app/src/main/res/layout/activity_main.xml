@@ -16,16 +16,23 @@
             android:layout_height="wrap_content"
             android:text="Hello World!"
             android:id="@+id/textView"/>
-    <Button
-            android:text="Colore"
+
+
+    <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="132dp"
-            android:id="@+id/Colore"
-            android:elevation="0dp"
-            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical">
+        <Button
+                android:id="@+id/btn_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="open dialog sample"
+        />
 
-    />
+
+    </LinearLayout>
+
 </RelativeLayout>
