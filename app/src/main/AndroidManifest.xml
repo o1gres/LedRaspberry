@@ -15,31 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-                android:name=".ColorPicker"
-                android:label="@string/title_activity_color_picker"
-                android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="ndroid.intent.action.ColorPicker"/>
 
-                <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-        </activity>
-        <activity
-                android:name=".SampleActivity3"
-                android:label="@string/title_activity_sample3"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-                android:name=".SampleActivity2"
-                android:label="@string/title_activity_sample2"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
-                android:name=".PrefsActivity"
-                android:label="@string/title_activity_prefs"
-                android:theme="@style/AppTheme.NoActionBar">
-        </activity>
     </application>
 
 </manifest>

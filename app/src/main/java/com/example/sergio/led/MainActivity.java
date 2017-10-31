@@ -98,11 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onClick(View view)
-    {
-        startActivity(new Intent(MainActivity.this, ColorPicker.class));
-    }
-
     private void changeBackgroundColor(int selectedColor) {
         currentBackgroundColor = selectedColor;
         root.setBackgroundColor(selectedColor);
