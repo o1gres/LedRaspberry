@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     //MQTT
     MqttAndroidClient mqttAndroidClient;
 
-    final String serverUri = "tcp://127.0.0.1:1883";
+    final String serverUri = "tcp://test.mosquitto.org:1883";
 
     String clientId = "ClientColor";
     final String subscriptionTopic = "Response";    //Risposta dal server MQTT all'invio del codice colore
@@ -173,6 +173,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             MqttMessage message = new MqttMessage();
             message.setPayload(messageToPublish.getBytes());
+            message.setQos(2);
+            message.setRetained(false);
             mqttAndroidClient.publish(publishTopic, message);
 
         } catch (MqttException e) {
