@@ -4,4 +4,5 @@
     <string name="title_activity_sample3">SampleActivity3</string>
     <string name="title_activity_sample2">SampleActivity2</string>
     <string name="title_activity_prefs">PrefsActivity</string>
+    <string name="title_activity_history_adapter">HistoryAdapter</string>
 </resources>
