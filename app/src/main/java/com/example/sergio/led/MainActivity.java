@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     //MQTT
     MqttAndroidClient mqttAndroidClient;
 
-    final String serverUri = "tcp://test.mosquitto.org:1883";
+    final String serverUri = "tcp://64.137.238.149:1883";
 
     String clientId = "ClientColor";
     final String subscriptionTopic = "Response";    //Risposta dal server MQTT all'invio del codice colore
@@ -156,7 +156,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        //Pulsante spegni
+        findViewById(R.id.btn_off).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                publishMessage("off");
+            }
+        });
+
     }
+
+
+
 
     private void changeBackgroundColor(int selectedColor) {
         currentBackgroundColor = selectedColor;
