@@ -21,12 +21,16 @@ import com.flask.colorpicker.builder.ColorPickerClickListener;
 import com.flask.colorpicker.builder.ColorPickerDialogBuilder;
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.*;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
     //Color Picker
     private View root;
     private int currentBackgroundColor = 0xffffffff;
+
+    //Color Picker Image
+    private ImageView colorPickerImage;
 
     //MQTT
     MqttAndroidClient mqttAndroidClient;
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //Connection to MQTT
         mqttAndroidClient = new MqttAndroidClient(getApplicationContext(), serverUri, clientId);
@@ -82,16 +87,6 @@ public class MainActivity extends AppCompatActivity {
         {
             Log.d("ERR", "Errore MQTT connect:" +e);
         }
-/*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-*/
 
 
         findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
@@ -166,6 +161,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        //Caricamento Immagine color picker
+        //colorPickerImage = (ImageView) findViewById(R.id.colorPicker_Image);
+        //colorPickerImage.setImageResource(R.drawable.color_picker);
     }
 
 
