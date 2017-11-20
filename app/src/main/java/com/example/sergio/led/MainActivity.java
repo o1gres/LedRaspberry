@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
     MqttAndroidClient mqttAndroidClient;
 
     final String serverUri = "tcp://64.137.238.149:1883";
+    final String MQTTUserName = "sergio";
+    final String MQTTPassword = "password";
 
     String clientId = "ClientColor";
     final String subscriptionTopic = "Response";    //Risposta dal server MQTT all'invio del codice colore
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
         mqttConnectOptions.setAutomaticReconnect(true);
         mqttConnectOptions.setCleanSession(false);
+        mqttConnectOptions.setUserName(MQTTUserName);
+        mqttConnectOptions.setPassword(MQTTPassword.toCharArray());
 
 
 
