@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
     final String MQTTPassword = "password";
 
     String clientId = "ClientColor";
-    final String subscriptionTopic = "Response";    //Risposta dal server MQTT all'invio del codice colore
-    final String publishTopic = "Request";          //Richiesta del colore da parte dell'app (invia il codice esadecimale del colore richiesto)
+    final String subscriptionTopic = "SergioRaspberryLedResponse";    //Risposta dal server MQTT all'invio del codice colore
+    final String publishTopic = "SergioRaspberryLed";          //Richiesta del colore da parte dell'app (invia il codice esadecimale del colore richiesto)
     final String publishMessage = null;
 
     @Override
