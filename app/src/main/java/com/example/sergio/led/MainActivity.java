@@ -135,7 +135,10 @@ public class MainActivity extends AppCompatActivity {
                                             sb = new StringBuilder("Color List:");
                                         sb.append("\r\n#" + Integer.toHexString(color).toUpperCase());
 
-                                        publishMessage(Integer.toHexString(color).toString());
+                                        String fullHexColor = Integer.toHexString(color).toString();
+                                        String hexColor = fullHexColor.substring(2, fullHexColor.length());
+
+                                        publishMessage(hexColor);
                                     }
 
                                     if (sb != null)
